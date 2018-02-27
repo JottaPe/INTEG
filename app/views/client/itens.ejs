@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<h1>Issues</h1>
+		<h2>Filtros</h2>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</head>
+    <body>
+        <table border="1px">
+            <tr ng-blind>
+                <td>Type</td>
+                <td>Issue</td>
+                <td>Rótulo</td>
+                <td>Descrição</td>
+            </tr>
+            <%for(var i=0;i<filter.issues.length;i++) {%>
+                <tr>	
+                    <td><%=filter.issues[i].fields.issuetype.name%></td>
+                    <td><a href="http://jiraproducao.totvs.com.br/browse/<%=filter.issues[i].key%>" target="_blank"> <%=filter.issues[i].key%> </a></td>
+                    <td><%=filter.issues[i].fields.customfield_11900%></td>
+					<td><%=filter.issues[i].fields.description%></td>
+                </tr>
+            <%}%>
+            <tr>
+            </tr>
+        </table>
+    </body>
+</html>

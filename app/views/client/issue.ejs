@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<h1>Issue</h1>
+		<h2><%issue.key%></h2>
+        <link rel="stylesheet" type="text/css" href=".app/viwes/client/index.css">
+	</head>
+    <body>
+        <section class="container">
+            <form id="issue">
+                <div class="">
+                    <label for="cod">Código     </label>
+                    <input id="cod" name="cod" type="text" title="teste" readonly=true value=<%=issue.key%> class="campo">
+                </div>
+                <div class="grupo"> 
+                    <label for="Ass">assignee   </label>
+                    <input id="Ass" name="Ass" type="text" readonly=true  value=<%=issue.fields.assignee.key%> class="campo">
+                </div>
+                <div class="grupo">
+                    <label for="Tp">Type        </label>
+                    <input id="Tp" name="Tp" type="text" readonly=true  value=<%=issue.fields.issuetype.name%> class="campo">
+                </div>
+                <div class="grupo">
+                    <label for="Desc">Descricão </label>
+                    <textarea rows="4" cols="50" id="Desc" readonly=true  name="Desc" class="campo"><%=issue.fields.description%></textarea>
+                </div>
+
+                <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+
+            </form>
+        </section>
+    </body>
+</html>
