@@ -7,4 +7,4 @@ app.set('views','./app/views');
 
 module.exports = function(){
 	return app;
-};
+}
