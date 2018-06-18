@@ -14,14 +14,16 @@
                 <td>Type</td>
                 <td>Issue</td>
                 <td>Rótulo</td>
+                <td>Desenvolvedor</td>
                 <td>Descrição</td>
             </tr>
             <%for(var i=0;i<filter.issues.length;i++) {%>
-                <tr class="tabItens">	
+                <tr class="tabItens">
                     <td><%=filter.issues[i].fields.issuetype.name%></td>
                     <td><a href="http://jiraproducao.totvs.com.br/browse/<%=filter.issues[i].key%>" target="_blank"> <%=filter.issues[i].key%> </a></td>
                     <td><%=filter.issues[i].fields.customfield_11900%></td>
-					<td><%=filter.issues[i].fields.description%></td>
+                    <td><%=filter.issues[i].fields.customfield_10048.name%></td>
+                    <td><%=filter.issues[i].fields.description%></td>
                 </tr>
             <%}%>
             <tr>

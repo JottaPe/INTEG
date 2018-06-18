@@ -5,7 +5,7 @@ function ConnectionJira (type ,url){
 
     req.auth({
       user: 'joao.balbino',
-      pass: 'Jottape_2315',
+      pass: 'Coffe_jp231588',
       sendImmediately: true
     });
     req.headers({
